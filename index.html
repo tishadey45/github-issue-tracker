@@ -7,15 +7,40 @@
     <title>GitHub issue tracker</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./style.css">
+
 </head>
 
 <body>
     <section class="bg-gray-200 flex items-center justify-center min-h-screen">
-        <div class="bg-white w-[400px] p-8 rounded-xl shadow">
+        <div class="bg-white w-100 p-8 rounded-xl shadow">
             <div class="text-center mb-6">
                 <img class="w-16 mx-auto mb-2" src="./assets/github-logo.png" alt="">
                 <h1 class="text-xl font-bold">GitHub Issues Tracker</h1>
                 <p class="text-gray-500 text-sm">Sign in to manage your issues</p>
+            </div>
+            <fieldset class=" from p-2">
+
+                <label class="label font-semibold text-gray-950">Username</label>
+                <input value="admin" id="user-name" type="email" class="input" placeholder="Enter username" required/>
+                <p class=" text-blue-950 font-semibold">Default: admin</p>
+
+                <label class="label  font-semibold  text-gray-950">Password</label>
+                <input value="admin123" id="password" type="password" class="input" placeholder="Enter password"required/>
+                <p class=" font-semibold text-blue-950">Default: admin123</p>
+
+
+                <button id="sign-btn" class="btn btn-neutral mt-4 bg-blue-800 border-none w-full">sign in</button>
+            </fieldset>
+            <div class="flex items-center my-4 text-sm">
+                <hr class="grow border-gray-300">
+                <span class="mx-3">OR</span>
+                <hr class="grow border-gray-300">
+            </div>
+            <div class=" p-3 rounded text-center text-sm">
+                <p class=" text-gray-400 pb-5">Demo Credentials:</p>
+                <p><span class="font-semibold">Username:</span> admin</p>
+                <p><span class="font-semibold">Password:</span> admin123</p>
             </div>
         </div>
     </section>
