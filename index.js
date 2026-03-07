@@ -10,9 +10,9 @@ if(username==="admin"){
     if(password ==="admin123" ){
     window.location.href = "./main.html"
     }else{
-    console.log("password tik nai");
+    alert("wrong password");
     }
 }else{
-   console.log("wrong username");
+   alert("wrong username");
 }
 })
