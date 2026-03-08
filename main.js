@@ -12,10 +12,28 @@ const loadIssueDetails = async (id) => {
   const details = await res.json();
   displayIssueDetails(details.data);
 };
+
+document.getElementById("search-issue").addEventListener("input", function (e) {
+  const searchValue = e.target.value;
+  // console.log(searchValue);
+  issueSearch(searchValue)
+});
+function issueSearch(searchText = "") {
+  // console.log(issueSearch);
+  fetch(
+    `https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${searchText}`
+  )
+  // console.log(fetch);
+   .then((res)=> res.json())
+   .then((json)=>displayIssue(json.data))
+
+}
+
+
 const displayIssueDetails = (issue) => {
   // console.log(issue);
   const issueContent = document.getElementById("modal-content");
-  
+
   issueContent.innerHTML = `
                     <div>
                           <h3 class="text-lg font-bold">${issue.title}</h3>
