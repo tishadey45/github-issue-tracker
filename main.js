@@ -21,8 +21,8 @@ const displayIssueDetails = (issue) => {
                           <h3 class="text-lg font-bold">${issue.title}</h3>
                           <div class="flex gap-2" >
                           <span class="badge badge-success" >${issue.status}</span>
-                          <p class="text-sm text-gray-600">
-                         Opened by ${issue.author} • ${issue.createdAt}
+                         <p class="text-sm text-gray-600">
+                        Opened by ${issue.author} • ${new Date(issue.createdAt).toLocaleDateString()}
                         </p>
                           </div>
                          
