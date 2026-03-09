@@ -30,9 +30,7 @@
                     </svg>
                     <input id="search-issue" type="search" required placeholder="Search issue..." />
                 </label>
-                <!-- <button class="btn text-gray-400 rounded  "><i class="fa-brands fa-sistrix"></i> Search
-                    issues...</button> -->
-                <button class="bg-indigo-700 text-white px-4  rounded">+ New Issue</button>
+                <button class="bg-indigo-700 text-white px-2  rounded">+ New Issue</button>
             </div>
         </nav>
 
@@ -48,15 +46,24 @@
             </div>
             <div class="flex mx-auto  w-11/12 bg-white py-4 p-10  rounded-sm">
                 <img class="w-10 h-10" src="./assets/Aperture.png" alt="">
-                <div class="justify-between">
-                    <h2>50 Issues</h2>
-                    <p>Track and manage your project issues</p>
-
+                <div class="flex justify-between w-12/12">
+                    <div class="px-4">
+                        <h2> <span id="issue-count">0</span> Issues</h2>
+                        <p>Track and manage your project issues</p>
+                    </div>
+                    <div class="flex gap-6 pt-3">
+                        <div class="w-3 h-3 bg-green-700 rounded-full mt-2 mx-2"></div>
+                        <h6>open</h6>
+                        <div class="w-3 h-3 bg-purple-700 rounded-full mt-2 mx-2"></div>
+                        <h6>closed</h6>
+                    </div>
                 </div>
             </div>
 
             <div id="issue-container" class="grid grid-cols-4 bg-gray-100 rounded-sm mx-auto p-10 w-11/12 gap-4 my-10">
+                <!-- <div class="issue-card"></div> -->
             </div>
+            <!-- <div class="issue-card"></div> -->
             <dialog id="issue_modal" class="modal">
                 <div class="modal-box">
                     <div id="modal-content">

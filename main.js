@@ -75,6 +75,14 @@ function issueSearch(searchText = "") {
     .then((json) => displayIssue(json.data));
 }
 
+const issueCount = () => {
+  // const count = document.querySelectorAll(".issue-card").length;
+  // document.getElementById("issue-count").innerText = `${count} Issues`;
+};
+
+
+issueCount();
+
 const displayIssueDetails = (issue) => {
   const issueContent = document.getElementById("modal-content");
 
@@ -122,6 +130,7 @@ const displayIssueDetails = (issue) => {
 };
 
 const displayIssue = (issues) => {
+  document.getElementById("issue-count").innerText = issues.length;
   const issueContainer = document.getElementById("issue-container");
 
   issueContainer.innerHTML = "";
