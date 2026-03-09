@@ -1,4 +1,3 @@
-
 const loadIssues = (status = "") => {
   console.log(status);
   fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
@@ -15,13 +14,17 @@ const loadIssues = (status = "") => {
     });
 };
 
-
 const loadIssueDetails = async (id) => {
   const url = `https://phi-lab-server.vercel.app/api/v1/lab/issue/${id}`;
   const res = await fetch(url);
   const details = await res.json();
   displayIssueDetails(details.data);
 };
+
+document.getElementById("all-tab").addEventListener("click", function () {
+  loadIssues();
+});
+
 
 document.getElementById("open-tab").addEventListener("click", function () {
   // console.log("open clicked");
@@ -32,22 +35,18 @@ document.getElementById("closed-tab").addEventListener("click", function () {
   loadIssues("closed");
 });
 
-
-document
-  .getElementById("search-issue")
-  .addEventListener("input", function (e) {
-    const searchValue = e.target.value;
-    issueSearch(searchValue);
-  });
+document.getElementById("search-issue").addEventListener("input", function (e) {
+  const searchValue = e.target.value;
+  issueSearch(searchValue);
+});
 
 function issueSearch(searchText = "") {
   fetch(
-    `https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${searchText}`
+    `https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${searchText}`,
   )
     .then((res) => res.json())
     .then((json) => displayIssue(json.data));
 }
-
 
 const displayIssueDetails = (issue) => {
   const issueContent = document.getElementById("modal-content");
@@ -71,7 +70,7 @@ const displayIssueDetails = (issue) => {
                     (label, index) =>
                       `<button class="btn btn-soft ${
                         colors[index % colors.length]
-                      } rounded-4xl">${label}</button>`
+                      } rounded-4xl">${label}</button>`,
                   )
                   .join("")}
             </div>
@@ -94,7 +93,6 @@ const displayIssueDetails = (issue) => {
 
   document.getElementById("issue_modal").showModal();
 };
-
 
 const displayIssue = (issues) => {
   const issueContainer = document.getElementById("issue-container");
@@ -136,7 +134,7 @@ const displayIssue = (issues) => {
                         (label, index) =>
                           `<button class="btn btn-soft ${
                             colors[index % colors.length]
-                          } rounded-4xl">${label}</button>`
+                          } rounded-4xl">${label}</button>`,
                       )
                       .join("")}
                 </div>
@@ -159,6 +157,5 @@ const displayIssue = (issues) => {
     issueContainer.append(element);
   });
 };
-
 
 loadIssues();
