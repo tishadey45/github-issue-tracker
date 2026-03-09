@@ -164,7 +164,7 @@ const displayIssue = (issues) => {
                     ${issue.description}
                 </p>
 
-                <div class="flex gap-4">
+                <div class="flex lg:gap-4 sm:gap-2">
                     ${issue.labels
                       .map(
                         (label, index) =>
