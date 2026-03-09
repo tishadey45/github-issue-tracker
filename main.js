@@ -133,7 +133,7 @@ const displayIssue = (issues) => {
 
     element.innerHTML = `
     
-        <div class="${issue.status === "open" ? "card bg-base-100 shadow-sm border border-green-700 cursor-pointer" : "card bg-base-100 shadow-sm border border-purple-700 cursor-pointer"}" onclick="loadIssueDetails(${issue.id})">
+        <div class="${issue.status === "open" ? "card bg-base-100 shadow-sm border-t-4 border-green-700 cursor-pointer" : "card bg-base-100 shadow-sm border-t-4 border-purple-700 cursor-pointer"}" onclick="loadIssueDetails(${issue.id})">
 
             <div class="card-body bg-white rounded-xl shadow-sm px-5 space-y-4">
 
