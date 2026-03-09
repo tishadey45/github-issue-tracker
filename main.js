@@ -194,4 +194,21 @@ const displayIssue = (issues) => {
   });
 };
 
+
+// active button
+
+const activeButton = document.querySelectorAll(".active-btn")
+
+activeButton.forEach((btn) => {
+  btn.addEventListener("click", function () {
+  //  console.log("clicked");
+      activeButton.forEach((b) => {
+      b.classList.remove("bg-indigo-600", "text-white");
+    });
+    this.classList.add("bg-indigo-600", "text-white");
+  });
+
+  });
+
+
 loadIssues();
