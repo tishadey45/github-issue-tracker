@@ -1,129 +1,199 @@
-# 🌟 Welcome To (সহজ সরল সিম্পল) Assignment - 5
-
-# **📅 Deadline For 60 marks:** 9th March, 2026 (11:59 pm ⏱️)  
-#  📅 No Deadline For 50 marks  
-# **📅 Deadline For 30 marks:** Any time after 9th March.
 
 ---
 
-# Assignment-05: GitHub Issues Tracker
+# ❓ JavaScript Questions & Answers
 
+### 1️⃣ What is the difference between `var`, `let`, and `const`?
+        var => একই নামে বারবার ডিক্লেয়ার করা যায় এতে কোনো error আসে না।
+        let => let দিয়ে মান আপডেট করা যায় কোনো error আসে না। 
+        const => const এর মান একবার সেট করলে আর পরিবর্তন করা যায় না এবং নতুন করে declarer করা যায় না
+---
 
-### **API Endpoints:**
-###  **All Issues:** 
-  - https://phi-lab-server.vercel.app/api/v1/lab/issues 
+### 2️⃣ What is the spread operator `(...)`?
 
-
-###  **Single Issue:**
-   - https://phi-lab-server.vercel.app/api/v1/lab/issue/{id}
-
-   - Example: https://phi-lab-server.vercel.app/api/v1/lab/issue/33
-
-
-###  **Search Issue:** https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q={searchText}
-
-   - Example:  https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=notifications
-
+      Spread Operator (...) হলো JavaScript এর একটি operator যেটা array বা object এর element গুলোকে expand করে। এটি সাধারণত array/object copy করা, merge করা বা নতুন element add করার জন্য ব্যবহার করা হয়।t arr2 = [...arr1,4,5];
 
 ---
 
-## 📝 Main Requirements
-
-## 🎨 Design Part
-
-## Login Page
-- Create a login page containing a logo, title, and sub-title
-- Below that, there will be 2 inputs, a sign-in button, and a demo credential to sign in. Follow the Figma for this page 
-- Styled as per Figma
-
-## Main Page: 
-
-### Navbar: 
-
-- Navbar with website logo/name on the left
-- Search input and button on the right
-
-### Tab Section like Figma: 
-
-- 3 tab ( All, Open, Closed) at the top of this section.(**All**, **Open**, **Closed**)
-
-- Below the tab, there will be an icon, the issue count, some text on the left, and an open and closed marker on the right
-
-- Responsiveness: The website should be responsive for mobile devices. It is totally up to you. 
-
-
---- 
-
-
-## ⚙️ Functionalities
-- In login page, there will be default admin credentials (username, password). You need to sign in using these credentials.
-
-- Load all issues and display as per Figma
-
-- On clicking on an open or closed tab, it will load the issues data of the related tab and show it in a display-like card in a 4-column layout like Figma. By default, it will show all data 
-
-- Each card shows:
-  - Title
-  - Description
-  - Status
-  - Category
-  - Author
-  - Priority
-  - Label
-  - CreatedAt
-- Clicking on a tree name in a card will open a modal and show all the information about that Issue. 
-
-### 🚀 Challenges
-
-
-- Show the card Top border based on their category(open, closed), open card will have Green Boder, closed card will have a purple border on top. 
-
-- Loading spinner on data load
-
-- Show active button on changing category names
-
-- Implement Search Functionality and 8 meaningful github commit.  
-
-- Create a readme file and answer this question on your own. Don’t copy-paste from Google or any AI chatbot. 
-    - 1️⃣ What is the difference between var, let, and const?
-    - 2️⃣ What is the spread operator (...)?
-    - 3️⃣ What is the difference between map(), filter(), and forEach()?
-    - 4️⃣ What is an arrow function?
-    - 5️⃣ What are template literals?
-
+### 3️⃣ What is the difference between `map()`, `filter()`, and `forEach()`?
+        map(), filter(),forEach() - javascript method work different :
+        map() => array এর প্রতিটি element  এর উপর operation চালায়।  তারপর একটি array return করে। 
+        filter () => condition অনুযায়ী element   নেয়। condition true হলে সেই element নিয়ে নতুন filtered array return  করে।
+        forEach() => array এর প্রতিটি element এর উপর loop  চালায় কোনো নতুন array return করে না undefined return   করে।
 
 ---
 
-## 🛠️ Technology Stack
+### 4️⃣ What is an arrow function?
 
-- **HTML**
-- **CSS** (Vanilla/Tailwind/DaisyUI)
-- **JavaScript** (Vanilla)
+       js এর arrow  function দিয়ে ছোটকরে function লেখা যায়,এ function এ   =>  চিহ্ন  ব্যবহার করা হয়।
 
 ---
 
-## 🔑 Demo Credentials
+### 5️⃣ What are template literals?
+      Template literals দিয়ে js এ string লেখা যায় যেখানে  backtick ( ) ব্যবহার করা যায় এবং ভিতরে variable সহজে বসানো যায়।
+---
+
+
+# 🚀 GitHub Issues Tracker
+
+A simple **GitHub Issues Tracker** built using **HTML, TailwindCSS, DaisyUI, and Vanilla JavaScript**.
+Users can view issues, filter them by status, search issues, and see detailed information in a modal.
+
+---
+
+# 📌 Features
+
+✅ Login system with demo credentials
+✅ View all issues from API
+✅ Filter issues by **All / Open / Closed** tabs
+✅ Search issues using API
+✅ Issue details modal
+✅ Dynamic issue count
+✅ Loading spinner while fetching data
+✅ Active tab highlighting
+✅ Responsive design for mobile devices
+✅ Category based card border color
+
+---
+
+# 🖥️ Live Demo
+
+🔗 **Live Site:**
+[https://github-issue-tracker-project.vercel.app](https://github-issue-tracker-project.vercel.app)
+
+🔗 **GitHub Repository:**
+[https://github.com/tishadey45/github-issue-tracker](https://github.com/tishadey45/github-issue-tracker)
+
+---
+
+# 🔑 Demo Credentials
 
 ```text
 Username: admin
 Password: admin123
 ```
 
+---
+
+# ⚙️ API Endpoints
+
+### 📄 Get All Issues
+
+```
+https://phi-lab-server.vercel.app/api/v1/lab/issues
+```
+
+### 📄 Get Single Issue
+
+```
+https://phi-lab-server.vercel.app/api/v1/lab/issue/{id}
+```
+
+Example:
+
+```
+https://phi-lab-server.vercel.app/api/v1/lab/issue/33
+```
+
+### 🔎 Search Issues
+
+```
+https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q={searchText}
+```
+
+Example:
+
+```
+https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=notifications
+```
 
 ---
 
-### Optional: 
- - No need to show status: Open, Closed styles On modals. 
- - No Need to show icon on labels 
- - No need to apply styles on Priority 
---- 
+# 🛠️ Technology Stack
 
-
-## 📤 What to submit
-
-- **GitHub Repository Link:**
-- **Live Site Link:**
+* **HTML**
+* **Tailwind CSS**
+* **DaisyUI**
+* **JavaScript (Vanilla)**
+* **Vercel (Deployment)**
 
 ---
 
+# 🎨 UI Sections
 
+## 🔐 Login Page
+
+* Logo
+* Title and subtitle
+* Username & password input
+* Sign-in button
+* Demo credentials
+
+---
+
+## 🏠 Main Page
+
+### Navbar
+
+* Website logo/name
+* Search input and search button
+
+---
+
+### Tab Section
+
+Three tabs:
+
+* **All**
+* **Open**
+* **Closed**
+
+By default, **All Issues** are shown.
+
+---
+
+### Issue Card Information
+
+Each issue card displays:
+
+* Title
+* Description
+* Status
+* Category
+* Author
+* Priority
+* Labels
+* Created Date
+
+Clicking on an issue title opens a **modal** showing full issue details.
+
+---
+
+# 🚀 Challenges Implemented
+
+✔ Card **Top Border Color**
+
+* 🟢 Open Issue → Green Border
+* 🟣 Closed Issue → Purple Border
+
+✔ **Loading Spinner** while fetching API data
+
+✔ **Active Tab Button** when switching categories
+
+✔ **Search Functionality**
+
+✔ **Responsive Layout**
+
+✔ **Meaningful GitHub Commits**
+
+---
+
+# 📤 Submission
+
+**GitHub Repo:**
+[https://github.com/tishadey45/github-issue-tracker](https://github.com/tishadey45/github-issue-tracker)
+
+**Live Site:**
+[https://github-issue-tracker-project.vercel.app](https://github-issue-tracker-project.vercel.app)
+
+---
