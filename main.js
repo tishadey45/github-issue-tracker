@@ -1,5 +1,6 @@
 const loadIssues = (status = "") => {
-  console.log(status);
+  // console.log(status);
+  document.getElementById("loader").classList.remove("hidden"); // removing hidden class for showing loading spinner
   fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
     .then((res) => res.json())
     .then((json) => {
@@ -11,8 +12,35 @@ const loadIssues = (status = "") => {
       }
 
       displayIssue(issues);
+      document.getElementById("loader").classList.add("hidden"); // adding hidden class for hiding loading spinner
     });
 };
+
+// const loadIssues = (status = "") => {
+
+//   const loader = document.getElementById("loader");
+//   loader.classList.remove("hidden");
+
+//   fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
+//     .then((res) => res.json())
+//     .then((json) => {
+
+//       setTimeout(() => {   // testing delay
+
+//         let issues = json.data;
+
+//         if (status) {
+//           issues = issues.filter((issue) => issue.status === status);
+//         }
+
+//         displayIssue(issues);
+
+//         loader.classList.add("hidden");
+
+//       }, 1000); // 2 second delay
+
+//     });
+// };
 
 const loadIssueDetails = async (id) => {
   const url = `https://phi-lab-server.vercel.app/api/v1/lab/issue/${id}`;
@@ -24,7 +52,6 @@ const loadIssueDetails = async (id) => {
 document.getElementById("all-tab").addEventListener("click", function () {
   loadIssues();
 });
-
 
 document.getElementById("open-tab").addEventListener("click", function () {
   // console.log("open clicked");
@@ -106,7 +133,7 @@ const displayIssue = (issues) => {
 
     element.innerHTML = `
     
-        <div class="${issue.status==="open" ? "card bg-base-100 shadow-sm border border-green-700 cursor-pointer" : "card bg-base-100 shadow-sm border border-purple-700 cursor-pointer"}" onclick="loadIssueDetails(${issue.id})">
+        <div class="${issue.status === "open" ? "card bg-base-100 shadow-sm border border-green-700 cursor-pointer" : "card bg-base-100 shadow-sm border border-purple-700 cursor-pointer"}" onclick="loadIssueDetails(${issue.id})">
 
             <div class="card-body bg-white rounded-xl shadow-sm px-5 space-y-4">
 
